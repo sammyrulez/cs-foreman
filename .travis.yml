@@ -10,4 +10,6 @@ services:
 script:
     # add src folder
     - export PYTHONPATH=$PYTHONPATH:./src
-    - python test/foreman_tests.py
+    - coverage run test/foreman_tests.py
+after_success:
+  - coveralls
