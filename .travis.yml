@@ -3,6 +3,9 @@ python:
   - "2.7"
 # command to install dependencies
 install: pip install -r requirements.txt --use-mirrors
+services:
+  - mongodb     # will start mongodb
+  - rabbitmq # will start rabbitmq-server
 # command to run tests
 script:
     # add src folder
